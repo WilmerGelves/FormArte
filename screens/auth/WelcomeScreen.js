@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image,  StatusBar } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  StatusBar,
+} from "react-native";
 const mascota = require("../../assets/mascotaLigth.png");
 
 export default function WelcomeScreen() {
@@ -18,14 +25,10 @@ export default function WelcomeScreen() {
 
       {/* Main */}
       <View style={styles.main}>
-
         {/* Logo Section */}
         <View style={styles.logoSection}>
           <View style={styles.logoContainer}>
-            <Image
-              source={mascota}
-              style={styles.logo}
-            />
+            <Image source={mascota} style={styles.logo} />
           </View>
 
           <Text style={styles.appName}>FORMARTE</Text>
@@ -33,15 +36,13 @@ export default function WelcomeScreen() {
 
         {/* Buttons */}
         <View style={styles.buttonSection}>
-
           <TouchableOpacity style={styles.googleButton}>
             <Text style={styles.googleText}>Continuar con Google</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButton}>
-            <Text style={styles.secondaryText}>Continuar sin registro</Text>
+          <TouchableOpacity style={styles.secondaryButton} onPress={() => navigation.replace("Inicio")}>
+            <Text>Continuar sin registro</Text>
           </TouchableOpacity>
-
         </View>
 
         {/* Footer */}
@@ -54,7 +55,6 @@ export default function WelcomeScreen() {
             <Text style={styles.link}>Términos de uso</Text>
           </View>
         </View>
-
       </View>
     </View>
   );
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 100,
   },
-  
+
   logoContainer: {
     width: 280,
     height: 280,
