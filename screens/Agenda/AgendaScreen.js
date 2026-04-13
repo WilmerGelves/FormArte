@@ -7,6 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import BottomNav from "../../components/ButtonsComponent";
+import { useNavigation } from "@react-navigation/native";
 
 export default function AgendaScreen({ navigation }) {
 
