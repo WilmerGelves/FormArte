@@ -30,6 +30,14 @@ export default function BottomNav({ active = "Inicio", onTabPress }) {
           Calma
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.item, active === "Perfil" && styles.activeItem]}
+        onPress={() => onTabPress && onTabPress("Perfil")}
+      >
+        <Text style={active === "Perfil" ? styles.activeText : styles.text}>
+          Perfil
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }

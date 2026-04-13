@@ -7,9 +7,12 @@ import {
   Image,
   StatusBar,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 const mascota = require("../../assets/mascotaLigth.png");
 
 export default function WelcomeScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
@@ -40,8 +43,11 @@ export default function WelcomeScreen() {
             <Text style={styles.googleText}>Continuar con Google</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButton} onPress={() => navigation.replace("Inicio")}>
-            <Text>Continuar sin registro</Text>
+          <TouchableOpacity
+            style={styles.secondaryButton}
+            onPress={() => navigation.replace("Inicio")}
+          >
+            <Text>Continuar sin registro perras</Text>
           </TouchableOpacity>
         </View>
 

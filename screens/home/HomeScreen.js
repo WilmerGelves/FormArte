@@ -5,18 +5,18 @@ import { useNavigation } from "@react-navigation/native";
 
 
 export default function HomeScreen() {
-const navigation = useNavigation();
-const handleTabPress = (tab) => {
-  navigation.navigate(tab);
-};
+  const navigation = useNavigation();
+  const handleTabPress = (tab) => {
+    navigation.navigate(tab);
+  };
 
   return (
     <View style={styles.container}>
 
-      {/* HEADER */}
+      {/* HEADER
       <View style={styles.header}>
         <Text style={styles.title}>FormArte</Text>
-      </View>
+      </View> */}
 
       {/* CONTENIDO */}
       <ScrollView contentContainerStyle={styles.content}>
