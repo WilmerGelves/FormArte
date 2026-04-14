@@ -47,7 +47,7 @@ export default function WelcomeScreen() {
             style={styles.secondaryButton}
             onPress={() => navigation.replace("Inicio")}
           >
-            <Text>Continuar sin registro perras</Text>
+            <Text>Continuar sin registro</Text>
           </TouchableOpacity>
         </View>
 

@@ -4,6 +4,7 @@ import AgendaScreen from "../../screens/Agenda/AgendaScreen";
 import CalmaScreen from "../../screens/calma/CalmaScreen";
 import WelcomeScreen from "../../screens/auth/WelcomeScreen";
 import ProfileScreen from "../../screens/profile/ProfileScreen";
+import NivelDetalle from "../../screens/home/NivelDetalleScreen"; 
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ export default function AppStack() {
       <Stack.Screen name="Agenda" component={AgendaScreen} />
       <Stack.Screen name="Calma" component={CalmaScreen} />
       <Stack.Screen name="Perfil" component={ProfileScreen} />
+      <Stack.Screen name="NivelDetalle" component={NivelDetalle} />
     </Stack.Navigator>
   );
 }
